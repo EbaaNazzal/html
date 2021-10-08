@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link href="style1.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            function Toggle(value){
+                switch(value){
+                    case 'aboutMe':
+                        document.getElementById('aboutMe').style.display="block";
+                        document.getElementById('Projects').style.display="none";
+                        document.getElementById('Settings').style.display="none";
+                        break;
+                    case 'Projects':
+                        document.getElementById('aboutMe').style.display="none";
+                        document.getElementById('Projects').style.display="block";
+                        document.getElementById('Settings').style.display="none";
+                        break;
+                    case 'Settings':
+                        document.getElementById('aboutMe').style.display="none";
+                        document.getElementById('Projects').style.display="none";
+                        document.getElementById('Settings').style.display="block";
+                        break;
+                }
+            }
+    
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="top-box">
+                <div class="cover">   
+                    <div class="profile-pic">
+                        <img src="avatar7.png" alt="profile pic"/>
+                        <div class="name"><span>John Deon</span></div>
+                    </div>          
+                </div>
+                <div class="nav">
+                    <span class="menu-option" onclick="Toggle('aboutMe')">ABOUT ME</span>
+                    <span class="menu-option" onclick="Toggle('Projects')">PROJECTS</span>
+                    <span class="menu-option" onclick="Toggle('Settings')">SETTINGS</span>
+                </div>
+                <div>
+            </div>
+            <div class="bottom-box" id="aboutMe">
+                <div class="left-box">
+                    <div class="personal-info white-bg">
+                        <div class="title-border title-font">
+                            <span>PERSONAL INFORMATION</span>
+                        </div>
+                        <div class="section-padding">
+                            <div>
+                                <span class="title-font">Full Name</span>
+                                <span class="info">Johnathen Deo</span>
+                            </div>
+                            <div>
+                                <span class="title-font">Mobile</span>
+                                <span class="info"> (123) 123 1234</span>
+                            </div>
+                            <div>
+                                <span class="title-font">Email</span>
+                                <span class="info">johnathendeo@moltran.com</span>
+                            </div>
+                            <div>
+                                <span class="title-font">Location</span>
+                                <span class="info"> USA </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="languages white-bg">
+                        <div class="title-border title-font">
+                            <span>LANGUAGES</span>
+                        </div>
+                        <div class="section-padding">
+                            <ul class="info">
+                                <li>English</li>
+                                <li>French</li>
+                                <li>Greek</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-box">
+                    <div class="bio white-bg">
+                        <div class="title-border title-font">
+                            <span>BIOGRAPHY</span>
+                        </div>
+                        <div class="section-padding">
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span>
+                            <p><b>but also the leap into electronic typesetting, remaining essentially unchanged</b></p> 
+                            <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                    <div class="skills-section white-bg">
+                        <div class="title-border title-font">
+                            <span>SKILLS</span>
+                        </div>
+                        <div class="section-padding">
+                            <div class="skill">
+                                <span class="skill-title"> Angular Js</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="progress"></div>
+                            <div class="skill">
+                                <span class="skill-title"> Javascript</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="progress"></div>
+                            <div class="skill">
+                                <span class="skill-title">Wordpress</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="progress"></div>
+                            <div class="skill">
+                                <span class="skill-title">HTML5 & CSS3</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- projects section -->
+            <div class="bottom-box white-bg section-display" id="Projects">
+                <div class="title-border title-font">
+                    <span>MY PROJECTS</span>
+                </div>
+                <div>
+                    <div>
+                        <table>
+                            <tr>
+                              <th>#</th>
+                              <th>ProjectName</th>
+                              <th>StartDate</th>
+                              <th>DueDate</th>
+                              <th>Assign</th>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>MoltranAdmin</td>
+                              <td>01/01/2015</td>
+                              <td>07/05/2015</td>
+                              <td>Codertheme</td>
+                            </tr>
+                            <tr>
+                               <td>2</td>
+                               <td>MoltranFrontend</td>
+                               <td>01/01/2015</td>
+                               <td>07/05/2015</td>
+                               <td>Codertheme</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>MoltranAdmin</td>
+                                <td>01/01/2015</td>
+                                <td>07/05/2015</td>
+                                <td>Codertheme</td>
+                              </tr>
+                          </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Settings section -->
+            <div class="bottom-box white-bg section-display" id="Settings">
+                <div class="title-border title-font">
+                    <span>EDIT PROFILE</span>
+                </div>
+                <div class="section-padding">
+                    <div> 
+                        <span class="title-font"> Name </span>
+                        <div><input type="text"/></div>
+                    </div>
+                    <div>
+                        <span class="title-font">Email</span>
+                        <div><input type="text"/></div>
+                    </div>
+                    <div>
+                        <span class="title-font"> Username </span>
+                        <div><input type="text"/></div>
+                    </div>
+                    <div>
+                        <span class="title-font"> Password </span>
+                        <div><input type="password"/></div>
+                    </div>
+                    <div>
+                        <span class="title-font"> Re-Password </span>
+                        <div><input type="password"/></div>
+                    </div>
+                    <div>
+                        <span class="title-font"> About me </span>
+                        <div><input type="text" id="aboutme-txtbox"/></div>
+                    </div>
+                    <div class="save-butt">
+                        <span>Save Changes</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

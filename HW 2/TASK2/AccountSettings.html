@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> AccountSettings </title>
+        <link href="style1.css" rel="stylesheet" type="text/css"/>
+
+        <script type="text/javascript">
+            function Toggle(value){
+                switch(value){
+                    case 'General':
+                    document.getElementById('General').style.display="block";
+                    document.getElementById('Password').style.display="none";
+                    document.getElementById('Info').style.display="none";
+                    document.getElementById('Notification').style.display="none";
+                    break;
+                    case 'Password':
+                    document.getElementById('General').style.display="none";
+                    document.getElementById('Password').style.display=" block";
+                    document.getElementById('Info').style.display="none";
+                    document.getElementById('Notification').style.display="none";
+        
+                    break;
+                    case 'Info':
+                    document.getElementById('General').style.display="none";
+                    document.getElementById('Password').style.display="none";
+                    document.getElementById('Info').style.display="block";
+                    document.getElementById('Notification').style.display="none";
+                    break;
+                    case 'Notification':
+                    document.getElementById('General').style.display="none";
+                    document.getElementById('Password').style.display="none";
+                    document.getElementById('Info').style.display="none";
+                    document.getElementById('Notification').style.display="block";
+                    break;
+                }
+            }
+            </script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="title"><span >Account Settings</span></div>
+            <div class="MainBox">
+                <div class="left-box">
+                    <div class="content" onclick="Toggle('General')"><span> General </span></div>
+                    <div class="content" onclick="Toggle('Password')"><span> Change Password </span></div>
+                    <div class="content" onclick="Toggle('Info')"><span> Info </span></div>
+                    <div class="content" onclick="Toggle('Notification')"><span> Notifications </span></div>
+                </div>
+                <!-- // General // -->
+                <div class="right-box" id="General">
+                    <div class="edit-pic-container">
+                        <div class="profile-pic">
+                            <img src="avatar.png" alt="profile pic" width="80" height="80">
+                        </div>
+                        <div class="pic-butt-container">
+                            <button type="button" class="upload"> Upload new photo</button>
+                            <button type="button"class="reset"> Reset </button>
+                            <span class="img-size">Allowed JPG, GIF or PNG, max size of 800K</span>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <div class="text-box">
+                            <span> Username </span>
+                            <div><input type="text" class="input-txt"/></div>
+                        </div>
+                        <div class="text-box"> 
+                            <span> Name </span>
+                            <div><input type="text" class="input-txt"/></div>
+                        </div>
+                        <div class="text-box">
+                            <span>Email</span>
+                            <div><input type="text" class="input-txt"/></div>
+                        </div>
+                        <div class="message-container">
+                            <span>Your email is not confirmed, please check your inbox</span>
+                            <a href="">Resend confirmation</a></div>
+                        
+                        <div class="text-box">
+                            <span> Company </span>
+                            <div><input  type="text" class="input-txt"/></div>
+                        </div>
+                        <div class="form-butt">
+                            <div class="Save-butt"><span>Save changes</span></div>
+                            <div class="cancel-butt"><span>Cancel</span></div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Password -->
+                    <div class="right-box" id="Password" style="display: none;">
+                        <div class="form">
+                            <div class="text-box">
+                                <span> Current Password </span>
+                                <div><input type="text" class="input-txt"/></div>
+                            </div>
+                            <div class="text-box"> 
+                                <span> New Password </span>
+                                <div><input type="text" class="input-txt"/></div>
+                            </div>
+                            <div class="text-box"> 
+                                <span> Repeat New Password </span>
+                                <div><input type="text" class="input-txt"/></div>
+                            </div>
+                            <div class="form-butt">
+                                <div class="Save-butt"><span>Save changes</span></div>
+                                <div class="cancel-butt"><span>Cancel</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Info // -->
+                    <div class="right-box" id="Info" style="display: none;">
+                        <div class="form">
+                            <div class="text-box">
+                                <span> Bio </span>
+                                <div><input type="text" class="input-txt"/></div>
+                            </div>
+                            <div class="text-box"> 
+                                <span> Birthday</span>
+                                <div><input type="date" class="input-txt"/></div>
+                            </div>
+                            <div class="text-box"> 
+                                <div>
+                                    <label for="Country">Country</label>
+                                    <select name="Country" id="Country">
+                                      <option value="USA" checked>USA</option>
+                                      <option value="JO">JO</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="section"> Contacts </div>
+                            <div class="text-box"> 
+                                <span> Phone</span>
+                                <div><input type="text" class="input-txt"/></div>
+                            </div>
+                            <div class="text-box"> 
+                                <span> Website</span>
+                                <div><input type="text" class="input-txt"/></div>
+                            </div>
+                            <div class="form-butt">
+                                <div class="Save-butt">
+                                    <span>Save changes</span>
+                                </div>
+                                <div class="cancel-butt">
+                                    <span>Cancel</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Notification // -->
+                    <div class="right-box" id="Notification" style="display: none;">
+                        <div class="form">
+                            <span class="section">Activity</span>
+                            <div>
+                                <div class="options">
+                                    <input type="checkbox" id="comment" name="comment" value="comment">
+                                    <label for="comment"> Email me when somene comments on my article </label><br>
+                                </div>
+                                <div class="options">
+                                    <input type="checkbox" id="answer" name="answer" value="answer">
+                                    <label for="answer"> Email me when somene answers on my forum hread </label><br>
+                                </div>
+                                <div class="options">
+                                    <input type="checkbox" id="follow" name="follow" value="follow">
+                                    <label for="follow"> Email me when somene follows me</label><br>
+                                </div>
+                            </div>
+                        <div>
+                            <span class="section">Application</span>
+                            <div>
+                                <div class="options">
+                                    <input type="checkbox" id="news" name="news" value="news">
+                                    <label for="news"> News and announcements </label><br>
+                                </div>
+                                <div class="options">
+                                    <input type="checkbox" id="updates" name="updates" value="updates">
+                                <label for="updates"> Weekly product updates </label><br>
+                                </div>
+                                <div class="options">
+                                    <input type="checkbox" id="blog" name="blog" value="blog">
+                                    <label for="blog"> Weekly blog digest </label><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-butt">
+                            <div class="Save-butt"><span>Save changes</span></div>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        
+    </body>
+</html>
